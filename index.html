@@ -258,23 +258,24 @@
     </p>
   </div>
 
-  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+  <!-- Contenedor con items-stretch para forzar la misma altura -->
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
     <!-- BakingDesk -->
-    <button class="js-open-demo card group overflow-hidden rounded-2xl text-left"
+    <button class="js-open-demo card group overflow-hidden rounded-2xl text-left flex flex-col h-full"
             data-src="demo/login.html"
             data-label="bakingdesk.demo — usuario: demo / contraseña: demo123">
-      <div class="flex aspect-video items-center justify-center bg-gradient-to-br from-[#FBE1E7] to-[#F3C8D2]">
+      <div class="flex aspect-video w-full items-center justify-center bg-gradient-to-br from-[#FBE1E7] to-[#F3C8D2]">
         <div class="flex flex-col items-center gap-3 text-[#8a3b4e]">
           <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3l14 9-14 9V3z"/></svg>
           <span class="font-display text-xs font-semibold">Clic para entrar</span>
         </div>
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-grow">
         <h3 class="font-display mb-2 text-lg font-semibold">BakingDesk</h3>
         <p class="mb-4 text-sm leading-relaxed text-[#9A9AA5]">
           Sistema de gestión para repostería: pedidos, productos, inventario y finanzas.
         </p>
-        <div class="flex flex-wrap gap-2">
+        <div class="flex flex-wrap gap-2 mt-auto">
           <span class="tag rounded-full px-3 py-1 text-xs font-medium">Java</span>
           <span class="tag rounded-full px-3 py-1 text-xs font-medium">MySQL</span>
           <span class="tag rounded-full px-3 py-1 text-xs font-medium">JS</span>
@@ -283,21 +284,21 @@
     </button>
 
     <!-- Sumas de Riemann -->
-    <button class="js-open-demo card group overflow-hidden rounded-2xl text-left"
+    <button class="js-open-demo card group overflow-hidden rounded-2xl text-left flex flex-col h-full"
             data-src="demo/riemann/index.html"
             data-label="riemann.demo — calculadora interactiva">
-      <div class="flex aspect-video items-center justify-center bg-gradient-to-br from-[#E4E9FD] to-[#C7D2FB]">
+      <div class="flex aspect-video w-full items-center justify-center bg-gradient-to-br from-[#E4E9FD] to-[#C7D2FB]">
         <div class="flex flex-col items-center gap-3 text-[#3B4A9C]">
           <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 3 4-7"/></svg>
           <span class="font-display text-xs font-semibold">Clic para calcular</span>
         </div>
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-grow">
         <h3 class="font-display mb-2 text-lg font-semibold">Sumas de Riemann</h3>
         <p class="mb-4 text-sm leading-relaxed text-[#9A9AA5]">
           Calculadora visual que aproxima el área bajo una curva, con gráfica interactiva en tiempo real.
         </p>
-        <div class="flex flex-wrap gap-2">
+        <div class="flex flex-wrap gap-2 mt-auto">
           <span class="tag rounded-full px-3 py-1 text-xs font-medium">JavaScript</span>
           <span class="tag rounded-full px-3 py-1 text-xs font-medium">Plotly</span>
           <span class="tag rounded-full px-3 py-1 text-xs font-medium">Math.js</span>
@@ -305,15 +306,17 @@
       </div>
     </button>
 
-    <!-- Marketplace: en proceso -->
-    <div class="card relative overflow-hidden rounded-2xl text-left">
+    <!-- SwipeMarket (En proceso) -->
+    <div class="card relative overflow-hidden rounded-2xl text-left flex flex-col h-full">
       <span class="absolute right-4 top-4 z-10 rounded-full bg-accent px-3 py-1 font-display text-[11px] font-semibold text-[#150505]">
         En proceso
       </span>
-      <div class="flex aspect-video items-center justify-center bg-gradient-to-br from-[#1D1D24] to-[#0A0A0D]">
-        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#6B6B75" stroke-width="1.8"><path d="M3 9l9-6 9 6"/><path d="M5 10v9a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1v-9"/></svg>
+      <div class="flex aspect-video w-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-[#1D1D24] to-[#0A0A0D]">
+        <!-- Icono modificado al estilo medallas "Próximamente" -->
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#6B6B75" stroke-width="1.8"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg>
+        <span class="font-display text-sm text-[#6B6B75]">Próximamente</span>
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-grow">
         <h3 class="font-display mb-2 text-lg font-semibold">SwipeMarket</h3>
         <p class="mb-4 text-sm leading-relaxed text-[#9A9AA5]">
           Plataforma para conectar compradores y vendedores con funciones nuevas e interactivas. Ahora mismo se esta elaborando — 
@@ -321,7 +324,7 @@
          <p class="mb-4 text-sm leading-relaxed text-[#9A9AA5]">
           ¡pronto podrás probarla aquí también!.
          </p>
-        <div class="flex flex-wrap gap-2">
+        <div class="flex flex-wrap gap-2 mt-auto">
           <span class="tag rounded-full px-3 py-1 text-xs font-medium">En desarrollo</span>
         </div>
       </div>
